@@ -5,7 +5,7 @@ It is a simple comic search project which has the functionalities to search comi
 - CSS3
 - SASS
 - React.js
-- redux.js
+- Redux
 - redux-saga
 - Bootstrap
 
