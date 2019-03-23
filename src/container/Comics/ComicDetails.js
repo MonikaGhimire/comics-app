@@ -4,8 +4,6 @@ import * as actions from '../../actions/main';
 import './ComicDetails.scss';
 
 class ComicDetails extends Component {
-    state = {}
-
     componentDidMount() {
         this.props.onFetchDetails(this.props.match.params.comicId);
     };

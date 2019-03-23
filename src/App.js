@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './comics-logo.jpeg';
+import logo from './Images/comics-logo.jpeg';
 import SearchComics from './container/Comics/SearchComics';
 import ComicDetails from './container/Comics/ComicDetails';
 import { Switch, Route } from 'react-router-dom';
 import Spinner from './component/Spinner/Spinner';
+import Notification from './component/Notification/Notification';
 
 class App extends Component {
   render() {
     let routes = (
       <Switch>
-          <Route path='/' exact component={SearchComics} />
-          <Route path='/:comicId' component={ComicDetails} />
+        <Route path='/' exact component={SearchComics} />
+        <Route path='/:comicId' component={ComicDetails} />
       </Switch>
     );
     return (
@@ -22,6 +23,7 @@ class App extends Component {
             <h3 className="comic-header">Comics Search</h3>
           </div>
         </header>
+          <Notification />
         <Spinner />
         {routes}
       </div>

@@ -5,6 +5,7 @@ const initialState = {
     comicsSearchResult: {
         results: []
     },
+    display: false,
     loading: false,
     comicDetails: {},
     offset: 0,
@@ -13,6 +14,7 @@ const initialState = {
 
 const onFetchComicsStart = (state, action) => {
     return updateObject(state, {
+        display: false,
         loading: true
     });
 };
@@ -21,6 +23,7 @@ const onFetchComics = (state, action) => {
     return updateObject(state, {
         comicsSearchResult: action.comicsSearchResult,
         loading: false,
+        display: false,
         offset: action.comicsSearchResult.offset
     });
 };
@@ -29,6 +32,7 @@ const onFetchComicsFail = (state, action) => {
     return updateObject(state, {
         loading: false,
         error: action.error,
+        display: true,
         comicsSearchResult: {
             results: []
         }
@@ -37,6 +41,7 @@ const onFetchComicsFail = (state, action) => {
 
 const onFetchComicDetailsStart = (state, action) => {
     return updateObject(state, {
+        display: false,
         loading: true
     });
 };
@@ -44,6 +49,7 @@ const onFetchComicDetailsStart = (state, action) => {
 const onFetchComicDetails = (state, action) => {
     return updateObject(state, {
         comicDetails: action.comicDetails,
+        display: false,
         loading: false
     });
 };
@@ -51,6 +57,7 @@ const onFetchComicDetails = (state, action) => {
 const onFetchComicDetailsFail = (state, action) => {
     return updateObject(state, {
         loading: false,
+        display: true,
         error: action.error
     });
 };
