@@ -1,6 +1,6 @@
-# Search Comics Frontend Application ✨
+# Comic Search Frontend Application
 
-It is a simple comics search project which has the functionalities to search comics. This project was built while practicing react, redux and redux-saga. The project was built using following technologies:
+It is a simple comic search project which has the functionalities to search comics, view details of each comic. This project was built as hubby project specially to learn redux-saga. This application is fetching the data from Marvel Comics API. The project was built using following technologies:
 - HTML5
 - CSS3
 - SASS
@@ -27,4 +27,3 @@ npm start
 ```
 npm run build
 ```
->>>>>>> basic implementation of project
