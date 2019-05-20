@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './Images/comics-logo.jpeg';
+import logo from './images/comics-logo.jpeg';
 import SearchComics from './container/Comics/SearchComics';
 import ComicDetails from './container/Comics/ComicDetails';
 import { Switch, Route } from 'react-router-dom';
